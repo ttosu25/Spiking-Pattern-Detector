@@ -1,4 +1,4 @@
-module core #(parameter WORD_LENGTH, NEURON_COUNT) //in this design its important to remember spike_in is the MSB of a NEURON_COUNT-bit Register
+module tt_um_core #(parameter WORD_LENGTH, NEURON_COUNT) //in this design its important to remember spike_in is the MSB of a NEURON_COUNT-bit Register
 (
 	//board peripherals
 	input wire [7:0] ui_in; // Dedicated inputs, connected to the input switches
