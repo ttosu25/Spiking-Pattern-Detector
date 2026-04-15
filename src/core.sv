@@ -57,6 +57,7 @@ module core #(parameter WORD_LENGTH, NEURON_COUNT) //in this design its importan
 		end
 		
 		else event_out <= (spike_out == spike_pattern);
+		indicator <= ~indicator;
 		
 	
 	end
