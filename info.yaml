@@ -23,6 +23,7 @@ project:
     - neuron_state_W.sv
     - sipo.sv
     - synapse_mem_W.sv
+    - core.sv
     
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
