@@ -17,11 +17,18 @@ module tt_um_Terdoo_Osu (
 );
 
     core #(.WORD_LENGTH(4),  .NEURON_COUNT(4)) pattern_detector (
-        .event_out(ui_out[0]),
-        .spike_in(ui_in[NEURON_COUNT]),
+        .event_out(ui_out[1]),
+        .indicator(ui_out[0]),
+        .spike_in(ui_in[NEURON_COUNT]), 
+        .spike_pattern(ui_in[3:0]),
         .clk(clk),
         .rst(!rst_n)
 
     );
+
+    assign ui_out[7:2] = '0;
+
+    assign uio_out = '0;
+    assign uio_oe  = '0;
 
 endmodule
