@@ -1,5 +1,5 @@
 module core #(parameter WORD_LENGTH, NEURON_COUNT) //in this design its important to remember spike_in is the MSB of a NEURON_COUNT-bit Register
-(output logic event_out, input logic spike_in, input logic [NEURON_COUNT - 1: 0] spike_pattern ,input logic clk, rst);
+(output logic event_out, output logic indicator, input logic spike_in, input logic [NEURON_COUNT - 1: 0] spike_pattern ,input logic clk, rst);
 
 	//control signals
 	logic n_we;
