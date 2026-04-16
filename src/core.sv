@@ -42,26 +42,18 @@ module core #(parameter WORD_LENGTH, NEURON_COUNT) //in this design its importan
 		
 		//	
 /////////////////////////////////////////////////// 	
-	always_ff @(posedge clk, posedge rst) begin
-	
-		//setting default values
-		if(rst) begin
-		//1 bit signals
-			event_out <= '0; 
-			
-		//LIF COMPUTATION PARAMETERS
-			threshold <= THRESH;
-			leak <= LEAK;
-			V_reset <= '0; // this default value is the easier way to avoid biasing - ideal since this is a simple microcosmic design
-			
-		end
-		
-		else event_out <= (spike_out == spike_pattern);
-		indicator <= ~indicator;
-		
-	
-	end
-	
+always_ff @(posedge clk or posedge rst) begin
+    if (rst) begin
+        event_out <= '0;
+        indicator <= '0;
+        threshold <= THRESH;
+        leak <= LEAK;
+        V_reset <= '0;
+    end else begin
+        event_out <= (spike_out == spike_pattern);
+        indicator <= ~indicator;
+    end
+end
 	
 /////////////////////////////////////////////initialising core units
 	synapse_mem_W #(.W(WORD_LENGTH), .N(NEURON_COUNT)) synapses (

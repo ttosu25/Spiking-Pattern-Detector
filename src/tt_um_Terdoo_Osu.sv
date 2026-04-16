@@ -26,10 +26,6 @@ module tt_um_Terdoo_Osu (
         .rst(!rst_n)
     );
 
-    assign uo_out[7:2] = '0;
-
-    // default unused bidirectional pins to input / zero
-    assign uio_out = '0;
-    assign uio_oe  = '0;
+    wire _unused = &{ena, uio_in, ui_in[7:5], 1'b0};
 
 endmodule
