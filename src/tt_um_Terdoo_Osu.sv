@@ -11,7 +11,7 @@ module tt_um_Terdoo_Osu (
     input  wire       rst_n
 );
 
-    localparam int WORD_LENGTH  = 4;
+    localparam int WORD_LENGTH  = 8;
     localparam int NEURON_COUNT = 7;
 
     core #(
