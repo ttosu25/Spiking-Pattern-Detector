@@ -12,7 +12,7 @@ module tt_um_Terdoo_Osu (
 );
 
     localparam int WORD_LENGTH  = 4;
-    localparam int NEURON_COUNT = 4;
+    localparam int NEURON_COUNT = 7;
 
     core #(
         .WORD_LENGTH(WORD_LENGTH),
@@ -20,8 +20,8 @@ module tt_um_Terdoo_Osu (
     ) pattern_detector (
         .event_out(uo_out[1]),
         .indicator(uo_out[0]),
-        .spike_in(ui_in[4]),
-        .spike_pattern(ui_in[3:0]),
+        .spike_in(ui_in[7]),
+        .spike_pattern(ui_in[6:0]),
         .clk(clk),
         .rst(!rst_n)
     );
@@ -30,6 +30,6 @@ module tt_um_Terdoo_Osu (
     assign uio_out     = 8'b0;
     assign uio_oe      = 8'b0;
 
-    wire _unused = &{ena, uio_in, ui_in[7:5], 1'b0};
+    wire _unused = &{ena, uio_in, 1'b0};
 
 endmodule
