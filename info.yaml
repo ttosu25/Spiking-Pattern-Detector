@@ -41,18 +41,18 @@ pinout:
   # Outputs
   uo[0]: "green-led"
   uo[1]: "actuator"
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
+  uo[2]: "red-led-s1" #here s denotes spike, these leds show the current spike pattern
+  uo[3]: "red-led-s2"
+  uo[4]: "red-led-s3"
+  uo[5]: "red-led-s4"
   uo[6]: ""
   uo[7]: ""
 
-  # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
+  # Bidirectional pins # here p denotes pattern, these leds display the pattern entered by the user
+  uio[0]: "red-led-p1"
+  uio[1]: "red-led-p2"
+  uio[2]: "red-led-p3"
+  uio[3]: "red-led-p4"
   uio[4]: ""
   uio[5]: ""
   uio[6]: ""
