@@ -28,7 +28,8 @@ module tt_um_Terdoo_Osu (
     );
 
     assign uo_out[6:7] = 2'b0;
-    assign uio_out     = 8'b0;
+    assign uio_out[3:0]     = uio_in[3:0]; // switches toggle LEDS which show what the pattern to be matched is
+    assign uio_out[4:7] = 4'b0;
     assign uio_oe      = 8'b0;
 
     wire _unused = &{ena, uio_in, ui_in[7:4], 1'b0};
