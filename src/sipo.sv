@@ -5,10 +5,8 @@ module sipo #(parameter N) //SERIAL-IN-PARALLEL-OUT N BIT REGISTER
 		if (rst)
 			q <= '0;
 		else if (enable) begin 
-			if(N == 1)
-				q <= a;
-			else
-				q <= {q[N-2:0], a};
+			
+			q <= {q[N-2:0], a}; // NOTE: SIPO cannot support N < 2
 			
 		end
 	end
