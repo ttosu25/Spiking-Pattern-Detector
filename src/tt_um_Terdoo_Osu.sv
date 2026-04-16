@@ -19,7 +19,7 @@ module tt_um_Terdoo_Osu (
         .NEURON_COUNT(NEURON_COUNT)
     ) pattern_detector (
         .event_out(uo_out[1]),
-        .spike_out(uo_out[2:5]),
+        .spike_out(uo_out[5:2]),
         .indicator(uo_out[0]),
         .spike_in(ui_in[4]),
         .spike_pattern(ui_in[3:0]),
@@ -27,9 +27,9 @@ module tt_um_Terdoo_Osu (
         .rst(!rst_n)
     );
 
-    assign uo_out[6:7] = 2'b0;
+    assign uo_out[7:6] = 2'b0;
     assign uio_out[3:0]     = uio_in[3:0]; // switches toggle LEDS which show what the pattern to be matched is
-    assign uio_out[4:7] = 4'b0;
+    assign uio_out[7:4] = 4'b0;
     assign uio_oe      = 8'b0;
 
     wire _unused = &{ena, uio_in, ui_in[7:4], 1'b0};
