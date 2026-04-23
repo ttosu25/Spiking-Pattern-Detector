@@ -11,3 +11,20 @@ test/sim_build
 test/__pycache__/
 test/results.xml
 test/gate_level_netlist.v
+
+
+# virtual environments
+.# venv
+.venv/
+venv/
+env/
+
+# python junk
+__pycache__/
+*.pyc
+
+# cocotb / sim outputs
+sim_build/
+*.fst
+*.vcd
+
