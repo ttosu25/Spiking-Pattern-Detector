@@ -24,13 +24,13 @@ This architecture serves as a foundation for exploring event-driven computation 
 ## How to test
 
 1. Input a pattern to be matched using input switches. LEDs on the board will light up in correspondance with the pattern.
-2. Connect the IRF520 MOSFET Driver Module's signal port to output port 5 and wire it's power ports accordingly
-3. Connect a 3-6V motor between an external 3-6V battery and the MOSFET driver module
-4. Press n_reset on the microcontroller
+2. Connect the IRF520 MOSFET Driver Module's signal port to output port 5 and wire it's power ports accordingly.
+3. Connect a 3-6V motor between an external 3-6V battery and the MOSFET driver module.
+4. Press n_reset on the microcontroller.
 5. Input a symmetric 0.5Hz square-wave signal using a signal generator into input port 5, making sure to latch your signal to high or low for your first bit before you press n_reset. 
 
- A green LED will flash each time the input is being sampled
- The current spike pattern will be indicated by a separate set of red LEDs
+ - A green LED will flash each time the input is being sampled
+ - The current spike pattern will be indicated by a separate set of red LEDs
 
  6. When the current spike pattern matches the pattern input by the user, the motor should rotate for a duration before returning to rest.
 
