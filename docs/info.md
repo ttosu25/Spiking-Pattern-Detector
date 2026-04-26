@@ -7,9 +7,9 @@ You can also include images in this folder and reference them in the markdown. E
 512 kb in size, and the combined size of all images must be less than 1 MB.
 -->
 
-## How it works
+## Spiking Detector
 
-It doesn't
+![Architecture of LIF neuromorphic core](docs/Spiking_Core_Schema.drawio.png)
 
 ## How to test
 
