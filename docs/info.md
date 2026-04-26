@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## Spiking Detector
 
-![Architecture of LIF neuromorphic core](docs/Spiking_Core_Schema.drawio.png)
+![Architecture of LIF neuromorphic core](Spiking-Pattern-Detector/docs/Spiking_Core_Schema.drawio.png)
 
 ## How to test
 
